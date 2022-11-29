@@ -86,19 +86,19 @@ function App() {
         <div className="timer">
           <div className="units">
             <div>{getDays()}</div>
-            <div className="unit-name">Days</div>
+            <div className="unit-name">days</div>
           </div>
           <div className="units">
             <div>{getHours()}</div>
-            <div className="unit-name">Hours</div>
+            <div className="unit-name">hours</div>
           </div>
           <div className="units">
             <div>{getMinutes()}</div>
-            <div className="unit-name">Minutes</div>
+            <div className="unit-name">minutes</div>
           </div>
           <div className="units">
             <div>{getSeconds()}</div>
-            <div className="unit-name">Seconds</div>
+            <div className="unit-name">seconds</div>
           </div>
         </div>
       </div>
