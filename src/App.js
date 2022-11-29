@@ -5,6 +5,7 @@ import {
 } from "react-circular-progressbar";
 import GradientSvg from "./GradientSvg";
 import { useEffect, useState } from "react";
+import YouTube from "react-youtube";
 
 const DDayDate = new Date(2022, 11, 26, 1, 15, 0, 0).getTime();
 const MaxDays = 30 * 24 * 60 * 60 * 1000;
@@ -35,6 +36,11 @@ function App() {
     };
   }, []);
 
+  const onReady = (e) => {
+    e.target.mute();
+    e.target.playVideo();
+  };
+
   return (
     <div className="main">
       <div className="container">
@@ -51,12 +57,28 @@ function App() {
             })}
           >
             <div className="div-round">
-              <iframe
+              <YouTube
+                iframeClassName="iframe-round"
+                videoId="zHyRtUISm7w"
+                onReady={onReady}
+                opts={{
+                  playerVars: {
+                    autoplay: 1,
+                    frameborder: 0,
+                    modestbranding: 0,
+                    controls: 0,
+                    loop: 1,
+                    playsinline: 1,
+                    iv_load_policy: 3,
+                  },
+                }}
+              />
+              {/* <iframe
                 className="iframe-round"
                 allow="autoplay; encrypted-media"
                 src="https://www.youtube.com/embed/zHyRtUISm7w?autoplay=1&frameborder=0&modestbranding=1&controls=0&loop=1&playsinline=1&iv_load_policy=3&mute=1"
                 title="phuket-video"
-              ></iframe>
+              ></iframe> */}
             </div>
           </CircularProgressbarWithChildren>
         </div>
