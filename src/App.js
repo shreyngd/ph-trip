@@ -7,7 +7,7 @@ import GradientSvg from "./GradientSvg";
 import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 
-const DDayDate = new Date(2022, 11, 26, 10, 00, 0, 0).getTime();
+const DDayDate = new Date(2022, 11, 26, 10, 0, 0, 0).getTime();
 const MaxDays = 30 * 24 * 60 * 60 * 1000;
 let timerId;
 
